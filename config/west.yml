@@ -20,7 +20,8 @@ manifest:
 
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      # main = Zephyr 4.1 / HWMv2; 本仓库板级仍是旧格式，CI 会 CMake/Kconfig 失败。先跟 v0.3，再按需升级并迁移板子。
+      revision: v0.3
       import: app/west.yml
 
     - name: zmk-nice-oled
