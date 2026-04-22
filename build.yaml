@@ -8,8 +8,5 @@ include:
     shield: nice_view_adapter nice_view_custom
     artifact-name: eyelash_sofle_right
 
-  - board: eyelash_sofle_left
-    shield: nice_view
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
-    artifact-name: eyelash_sofle_studio_left
+  # Studio 左半 (nice_view + studio-rpc) 在 GitHub Actions 上会触发 Kconfig/zephyr
+  # 路径错误；需要 Studio 时再单独查 ZMK 上游对 shield/snippet 的要求后加回。
